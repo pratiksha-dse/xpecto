@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Login | Xpecto</title>
         <!-- CSS only -->
         <link href="./css/login.css" rel="stylesheet" type="text/css" />
@@ -120,12 +121,17 @@
       }
       .login-with-google-btn {
           transition: background-color 0.3s, box-shadow 0.3s;
-          padding: 12px 16px 12px 42px;
+
+          position: absolute;
+          /* padding: 12px 16px 12px ; */
+
+          padding: 12px 16px 12px 100px;
+
           border: none;
-          border-radius: 3px;
-          box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+          
+          
           color: #757575;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 500;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
               Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -285,7 +291,137 @@
         .menu ul li a:hover {
             color: #03a9f4;
         }
- 
+        .container2 {
+        /* margin: 100px auto; */
+        /* padding: 30px; */
+        /* display: flex; */
+        /* align-items: center; */
+        width: 300px;
+        height: 120px;
+        /* background-color: #fff; */
+        border-radius: 4px;
+      }
+      @media(max-width :480px){
+        .container2{
+          width: 350px;
+        }
+        .logo img {
+          width: 300px;
+        }
+        .sign-in{
+          width: 250px;
+        }
+      }
+      h3 {
+        text-align: center;
+        color: #2c2c2c;
+        margin-bottom: 40px;
+      }
+      
+      /* google-section-end */
+      /* Line-start */
+      .container2 .line {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #bebebe;
+        line-height: 0.1em;
+        margin: 50px;
+        margin-left: 0%;
+      }
+      .container2 .line .or {
+        background: #fff;
+        padding: 0 10px;
+        color: #aaaaaa;
+        display: inline;
+        font-size: 14px;
+      }
+      /* Line-end */
+ .container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+ .text-white {
+            text-align: center;
+        }
+        header {
+            display: flex;
+            padding-left: 40px;
+            padding-right: 10px;
+        }
+        .showcase.active {
+            right: 250px;
+        }
+        @media (max-width: 768px) {
+            .showcase.active {
+                right: 50%;
+            }
+            
+        }
+        @media (max-width: 480px) {
+          .sign-in{
+            font-size: 1rem;
+          }
+          .google-box{
+            width: 200px;
+          }
+
+          
+            .showcase.active {
+                right: 75%;
+            }
+            header .logo {
+                font-size: 1.5rem;
+            }
+          
+            header {
+                /* padding-left: 40px; */
+                padding-right: 10px;
+                display: flex;
+                /* align-items: flex-end; */
+            }
+            /* .showcase {
+                padding-right: 50px;
+                
+            } */
+        }
+
+.sign-in img{
+  width: 2.5rem;
+}
+.sign-in{
+  /* border: none; */
+  /* min-width: 370px; */
+  background-color: darkblue;
+  border: 3px solid darkblue;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: 0.25s;
+  width: 80%;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: darkblue;
+}
+.sign-in:hover{
+  color: darkblue;
+  background-color: #fff;
+  transition: 0.25s;
+
+}
+@media (max-width: 480px) {
+          .sign-in{
+            font-size: 1rem;
+          }
+        .sign-in img{
+          width: 1.25rem;
+        }
+        }
+        .logo-google img{
+          margin-top: 1rem;
+          width: 150px;
+        }
     </style>
     <body>
 
@@ -305,29 +441,24 @@
                 <div class="logo m-1">
                   <img src="https://user-images.githubusercontent.com/56690827/162669761-372be060-ea2f-4712-b77f-d9f8c6a89622.png" />
                   <!-- <h4>Xpecto'22</h4> -->
-                </div>
-                <form id="loginForm" class="login-form-wrapper">
-                  <!-- <div class="login-input">
-                    <label for="username">Username or email:</label>
-                    <input autocomplete="off" id="username" type="text" name="username" />
-                    <p id="usernameRequiredMessage">Username or email is required</p>
-                  </div>
-                  <div class="login-input">
-                    <label for="password">Password:</label>
-                    <input autocomplete="off" id="password" type="password" name="password" />
-                    <p id="passwordRequiredMessage">Password is required</p>
-                  </div>
-                  <input id="loginButton" class="login-button" type="submit" value="Log In" /> -->
-                  <br>
-                  </a><button type="button" class="login-with-google-btn" >
-                      <a href="/auth/google">
-                      Sign in with Google
-                      </a>
-                    </button>
-                </form>
+                
+                
+                    
+                
                 
               </div>
+              <div class="container2">
+                <div class="sign-box">
+                  <!-- <div class="logo-google"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"></div> -->
+                  <a href="/auth/google"><button class="sign-in"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"> Sign In</button></a>
+
+                </div>
+              </div>
           
+
+
+
+
 
           </section>
             <%- include('partials/navbar_menu.ejs') %>
